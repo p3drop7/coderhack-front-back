@@ -1,6 +1,7 @@
 import React from 'react'
-import './Access.scss'
+import SignInFormContainer from '../SignInForm/SignInFormContainer'
 import { BsInstagram, BsFacebook, BsYoutube } from "react-icons/bs"
+import './Access.scss'
 
 function AccessContainer() {
     return (
@@ -22,14 +23,14 @@ function AccessContainer() {
                 </div>
 
                 <div className="access-socialmedia">
-                        <p>!Síguenos!</p>
+                        <p>¡Síguenos!</p>
                         <BsInstagram className="main_socialmedia-icon" />
                         <BsFacebook className="main_socialmedia-icon" />
                         <BsYoutube className="main_socialmedia-icon"/>
                 </div>
-
-
             </div>
+
+            <SignInFormContainer className="SignInFormContainer" />
 
         </div>
     )

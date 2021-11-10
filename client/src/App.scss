@@ -36,3 +36,16 @@ $grey-darken-1: #757575;
 $grey-darken-2: #616161;
 $grey-darken-3: #424242;
 $grey-darken-4: #212121;
+
+
+// MIXINS
+@mixin btnNav ($w, $h, $color){
+    width: $w;
+    height: $h;
+    padding: 10px;
+    border-radius: 37px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: $color;
+}
