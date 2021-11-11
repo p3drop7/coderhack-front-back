@@ -32,6 +32,18 @@ function AccessContainer() {
 
             <SignInFormContainer className="SignInFormContainer" />
 
+            <div className="bean-flamepea--1"></div>
+            <div className="bean-bluediane--1--border"></div>
+
+            <div className="bean-silvertree--2"></div>
+            <div className="bean-calypso--2--border"></div>
+
+            <div className="bean-atlantis--3"></div>
+            <div className="bean-parsley--3--border"></div>
+
+            <div className="bean-roman--4"></div>
+            <div className="bean-cerisedark--4--border"></div>
+
         </div>
     )
 }

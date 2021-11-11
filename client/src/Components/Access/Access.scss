@@ -12,6 +12,7 @@
     background-color: $grey-lighten-3;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 
     .accessContainer_div {
         grid-area: access;
@@ -101,5 +102,107 @@
 
     .SignInFormContainer {
         grid-area: form;
+    }
+}
+
+.bean-flamepea--1{
+    @include accessBean (100px, 200px, $flame-pea, none, 0px, 40deg, 10vh, 0, 0, -10vw);
+    z-index: -1
+}
+
+.bean-bluediane--1--border {
+    @include accessBean (100px, 200px, transparent, $blue-diane, 2px, 30deg, 5vh, 0, 0, -8vw);
+}
+
+.bean-silvertree--2{
+    @include accessBean (70px, 170px, $silver-tree, none, none, 145deg, 70vh, 0, 0, -7vw)
+}
+
+.bean-calypso--2--border {
+    @include accessBean (70px, 170px, transparent, $calypso, 2px, 145deg, 65vh, 0, 0, -7vw)
+}
+
+.bean-atlantis--3 {
+    @include accessBean (70px, 170px, $atlantis, none, 0, 145deg, -5vh, 0, 0, 63vw);
+    z-index: -1;
+}
+
+.bean-parsley--3--border {
+    @include accessBean (70px, 170px, transparent, $parsley, 1px, 145deg, -3vh, 0, 0, 66vw);
+}
+
+.bean-roman--4 {
+    @include accessBean (70px, 170px, $roman, none, 0, 145deg, 40vh, 0, 0, 91vw);
+    z-index: -1;
+}
+
+.bean-cerisedark--4--border {
+    @include accessBean (70px, 170px, transparent, $cerise-dark, 1px, 145deg, 35vh, -0, 0, 91vw);
+}
+
+@media (max-width: 1080px){
+    .access_main{
+        width: 380px;
+    }
+    
+    .access_bar1, .access_bar2 {
+        left: -52% !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .access_main{
+        width: 300px;
+    }
+
+    .accessContainer{
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+            "access form";    
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .accessContainer_div {
+        align-items: center !important;
+    }
+
+    .bean-bluediane--1--border {
+        z-index: -2;
+    }
+}
+
+@media (max-width: 720px) {
+    
+    .accessContainer{
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+            "form";    
+        grid-template-columns: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .bean-flamepea--1{
+        @include accessBean (100px, 200px, $flame-pea, none, 0px, 40deg, 10vh, 0, 0, -15vw);
+        z-index: -1
+    }
+    
+    .bean-bluediane--1--border {
+        @include accessBean (100px, 200px, transparent, $blue-diane, 2px, 30deg, 5vh, 0, 0, -15vw);
+    }
+
+    .bean-silvertree--2{
+        @include accessBean (70px, 170px, $silver-tree, none, none, 145deg, 70vh, 0, 0, -12vw);
+        z-index: -1;
+    }
+    
+    .bean-calypso--2--border {
+        @include accessBean (70px, 170px, transparent, $calypso, 2px, 145deg, 65vh, 0, 0, -12vw);
+        z-index: -1;
     }
 }

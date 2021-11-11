@@ -20,8 +20,11 @@ function SignInFormContainer() {
 
     return (
         <div className="SignInFormContainer">
+
+            <div className="access_logo--form" ></div>
+
             <div className="SignInFormContainer_div">
-                <h2>¡Bienvenido!</h2>
+                <h2>¡bienvenidx!</h2>
 
                 <div className="signIn_selector">
                     <div className="iniciarSesion_selector broomBackground" onClick={clickHandlerAccess} >Iniciar sesión</div>
@@ -54,6 +57,9 @@ function SignInFormContainer() {
                         
                     </form> 
                 }
+
+                <div className="access_bar1--form"></div>
+                <div className="access_bar2--form"></div>
 
                 { (form === 2) &&
                     <form action="#" className="signIn_form">

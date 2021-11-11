@@ -75,10 +75,10 @@ main{
             z-index: 9999;
             position: relative;
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
             flex-direction: row;
             flex-wrap: wrap;
-            margin: 30px;
+            margin: 0px;
         .box-participants{
             display: flex;
             position: relative;

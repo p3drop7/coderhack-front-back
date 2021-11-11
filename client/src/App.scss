@@ -54,3 +54,17 @@ $grey-darken-4: #212121;
     font-size: 14px;
     background-color: $color;
 }
+
+@mixin accessBean ($h, $w, $color, $bodercolor, $boderWeight, $rot, $top, $right, $bottom, $left){
+    height: $h;
+    width: $w;
+    background-color: $color;
+    border-radius: 50px;
+    border: $boderWeight solid $bodercolor;
+    transform: rotate($rot);
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left
+}
