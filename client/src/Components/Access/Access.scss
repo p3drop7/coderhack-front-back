@@ -1,0 +1,208 @@
+@import "../../App.scss";
+
+.accessContainer{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        ". access form .";    
+    grid-template-columns: 1fr 5fr 5fr 1fr;
+    grid-template-rows: 100vh;
+    overflow: hidden;
+    background-color: $grey-lighten-3;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    .accessContainer_div {
+        grid-area: access;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        .access_logo {
+            height: 1.7em;
+            width: 50%;
+            background-image: url("./logo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .access_main_container {
+            height: 60vh;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+
+            .access_main {
+                height: auto;
+                margin-bottom: 20px;
+
+                h1{
+                    margin: 10px 0px;
+                    color: $blue-diane;
+                    font-size: 2.5em;
+                }
+
+                p{
+                    color: $grey-darken-1;
+                    font-size: 1.2em;
+                }
+            }
+
+            .access_bar_container {
+                width: 100%;
+                height: 40%;
+                position: relative;
+                z-index: -1;
+
+                .access_bar1 {
+                    display: block;
+                    width: 120vw;
+                    height: 100%;
+                    left: -20%;
+                    background: $blue-diane;
+                    display: block;
+                    position: absolute;
+                    transform-origin: bottom right;
+                    transform: skew(0deg, -1.5deg);
+                }
+                
+                .access_bar2{
+                    width: 120vw;
+                    height: 100%;
+                    left: -20%;
+                    background-color: $blue-diane;
+                    position: absolute;
+                    transform-origin: top left;
+                    transform: skew(0deg, 1.5deg);
+                }
+            }
+        }
+
+        .access-socialmedia{
+            padding: 10px;
+            width: 40%;
+            color: white;
+            background-color: $blue-diane;
+            border-radius: 50px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+            font-weight: bolder;
+
+            .main_socialmedia-icon {
+                font-size: 1.2em;
+            }
+        }
+    }
+
+    .SignInFormContainer {
+        grid-area: form;
+    }
+}
+
+.bean-flamepea--1{
+    @include accessBean (100px, 200px, $flame-pea, none, 0px, 40deg, 10vh, 0, 0, -10vw);
+    z-index: -1
+}
+
+.bean-bluediane--1--border {
+    @include accessBean (100px, 200px, transparent, $blue-diane, 2px, 30deg, 5vh, 0, 0, -8vw);
+}
+
+.bean-silvertree--2{
+    @include accessBean (70px, 170px, $silver-tree, none, none, 145deg, 70vh, 0, 0, -7vw)
+}
+
+.bean-calypso--2--border {
+    @include accessBean (70px, 170px, transparent, $calypso, 2px, 145deg, 65vh, 0, 0, -7vw)
+}
+
+.bean-atlantis--3 {
+    @include accessBean (70px, 170px, $atlantis, none, 0, 145deg, -5vh, 0, 0, 63vw);
+    z-index: -1;
+}
+
+.bean-parsley--3--border {
+    @include accessBean (70px, 170px, transparent, $parsley, 1px, 145deg, -3vh, 0, 0, 66vw);
+}
+
+.bean-roman--4 {
+    @include accessBean (70px, 170px, $roman, none, 0, 145deg, 40vh, 0, 0, 91vw);
+    z-index: -1;
+}
+
+.bean-cerisedark--4--border {
+    @include accessBean (70px, 170px, transparent, $cerise-dark, 1px, 145deg, 35vh, -0, 0, 91vw);
+}
+
+@media (max-width: 1080px){
+    .access_main{
+        width: 380px;
+    }
+    
+    .access_bar1, .access_bar2 {
+        left: -52% !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .access_main{
+        width: 300px;
+    }
+
+    .accessContainer{
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+            "access form";    
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .accessContainer_div {
+        align-items: center !important;
+    }
+
+    .bean-bluediane--1--border {
+        z-index: -2;
+    }
+}
+
+@media (max-width: 720px) {
+    
+    .accessContainer{
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+            "form";    
+        grid-template-columns: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .bean-flamepea--1{
+        @include accessBean (100px, 200px, $flame-pea, none, 0px, 40deg, 10vh, 0, 0, -15vw);
+        z-index: -1
+    }
+    
+    .bean-bluediane--1--border {
+        @include accessBean (100px, 200px, transparent, $blue-diane, 2px, 30deg, 5vh, 0, 0, -15vw);
+    }
+
+    .bean-silvertree--2{
+        @include accessBean (70px, 170px, $silver-tree, none, none, 145deg, 70vh, 0, 0, -12vw);
+        z-index: -1;
+    }
+    
+    .bean-calypso--2--border {
+        @include accessBean (70px, 170px, transparent, $calypso, 2px, 145deg, 65vh, 0, 0, -12vw);
+        z-index: -1;
+    }
+}

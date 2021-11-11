@@ -1,5 +1,19 @@
-// COLORS
+//FONTS
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+// COLORS
 //Stronger colors
 $blue-diane: #0C3944;    //Corporate color
 $calypso: #196C84;       //Entrepeneurs  //Nature Color
@@ -27,3 +41,30 @@ $grey-darken-1: #757575;
 $grey-darken-2: #616161;
 $grey-darken-3: #424242;
 $grey-darken-4: #212121;
+
+
+// MIXINS
+@mixin btnNav ($w, $h, $color){
+    width: $w;
+    height: $h;
+    padding: 10px;
+    border-radius: 37px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: $color;
+}
+
+@mixin accessBean ($h, $w, $color, $bodercolor, $boderWeight, $rot, $top, $right, $bottom, $left){
+    height: $h;
+    width: $w;
+    background-color: $color;
+    border-radius: 50px;
+    border: $boderWeight solid $bodercolor;
+    transform: rotate($rot);
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left
+}
