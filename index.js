@@ -1,5 +1,20 @@
 const path = require('path');
 require('dotenv').config();
+const cors = require('cors');
+
+const whitelist = ['http://localhost:3000', 'http://localhost:8800', 'https://coderhack-equipo5.herokuapp.com/', 'http://coderhack-equipo5.herokuapp.com/'];
+const corsOptions = {
+    origin: function (origin, callback) {
+        console.log('** Origin or request ' + origin);
+        if (whitelist.indexOf(origin) !== -1 || !origin) {
+            console.log('Origin acceptable');
+            callback(null, true);
+        } else {
+            console.log('Origin rejected');
+            callback(new Error('Not allowed by CORS'));
+        }
+    }
+};
 
 // Initialize
 const app = require('./server');
