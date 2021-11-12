@@ -26,8 +26,21 @@ const UserSchema = new mongoose.Schema({
         type: Array,
         default: [],
     },
+    isAdmin: {
+        type: Boolean,
+        default: false,
+    },
     isBusiness: {
         type: Boolean,
         default: false,
+    },
+    description: {
+        type: String,
+        max: 500,
+        default: "",
     }
-});
+},
+{ timestamps: true }
+);
+
+module.exports = mongoose.model('User', UserSchema);
