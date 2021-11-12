@@ -242,6 +242,9 @@ main{
         align-items: center;
         @include btnNav(255px, 58px, $broom);
         margin-top: 20px;
+        transition: all 0.5s;
+        cursor: pointer;
+        
         .btn-banner{
             list-style: none;
             .a_link{
@@ -252,6 +255,11 @@ main{
             }
         }
     }
+
+    .container-btn-banner:hover {
+        @include btnNav(255px, 58px, #C7BD00)
+    }
+    
     .flamepea-bean{
         position: absolute;
         @include btnNav(355px, 135px, $flame-pea);

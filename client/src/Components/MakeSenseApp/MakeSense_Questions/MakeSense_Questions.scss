@@ -1,10 +1,16 @@
 @import '../../../App.scss';
 
 .container-questions{
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 90px;
+    position: fixed;
+    top: 0%;
+    z-index: 100;
+    background-color: rgba(33, 33, 33, 0.7);
+
     .questions{
         @include box(520px, 14px);
         display: flex;
@@ -28,6 +34,7 @@
             width: 95%;
             .submit{
                 @include submit($calypso, 37px);
+                cursor: pointer;
             }
         }
     }

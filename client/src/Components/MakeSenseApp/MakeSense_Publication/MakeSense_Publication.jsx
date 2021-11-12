@@ -1,30 +1,43 @@
-import React from 'react'
-import './MakeSense_Publication.scss'
 import userimg from "./assets/userimg.png";
 import points from "./assets/points.svg";
 import like from "./assets/like.png";
 import message from "./assets/message.png";
 import save from "./assets/save.png";
 import userwoman from "./assets/userwoman.png";
+import MakeSense_Questions from '../MakeSense_Questions/MakeSense_Questions';
+import './MakeSense_Publication.scss'
 
 function MakeSense_Publication() {
-    return (
-        <div class="container-comment">
-            <div class="comment">
 
-                <div class="container-userinfo">
-                    <div class="user-data">
+    function clickHandler(){
+        const questionsAlert = document.querySelector(".questionsAlert")
+
+        if(questionsAlert.classList.contains('alertHidden')){
+            questionsAlert.classList.remove("alertHidden")
+            questionsAlert.classList.add("alertVisible")
+        }
+    }
+
+    return (
+        <div className="container-comment">
+
+            <MakeSense_Questions className="questionsAlert alertHidden" />
+
+            <div className="comment">
+
+                <div className="container-userinfo">
+                    <div className="user-data">
                         <img src={userimg} alt="userimg"></img>
-                        <div class="user-datatext">
+                        <div className="user-datatext">
                             <h4>Nombre Apellido</h4>
                             <p>fecha y hora de publicacion</p>
                         </div>
                     </div>
 
-                    <img class="points" src={points} alt="points"></img>
+                    <img className="points" src={points} alt="points"></img>
                 </div>
 
-                <div class="container-usertext">
+                <div className="container-usertext">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Adipiscing at etiam quis nunc maecenas id bibendum euismod
@@ -37,37 +50,37 @@ function MakeSense_Publication() {
                     </p>
                 </div>
 
-                <div class="container-reactions"> 
-                    <div class="reactions">
-                        <div class="reaction">
+                <div className="container-reactions"> 
+                    <div className="reactions">
+                        <div className="reaction">
                             <img src={like} alt="like"></img>     
-                            <div class="box-text">
+                            <div className="box-text">
                                 <p>me gusta</p>
                             </div>
                         </div>
 
-                        <div class="reaction">
+                        <div className="reaction">
                             <img src={message} alt="message"></img>     
-                            <div class="box-text">
+                            <div className="box-text">
                                 <p>comentar</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="save">
+                    <div className="save">
                         <img src={save} alt="save"></img>     
-                        <div class="box-text">
+                        <div className="box-text">
                             <p>guardar</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="container-answer">
-                    <div class="user-answer">
+                <div className="container-answer">
+                    <div className="user-answer">
                         <img src={userwoman} alt="userwoman"></img>
                     </div>
-                    <div class="boxaswer">
-                        <input class="input-answer" type="text" placeholder="¿cómo resolverias este reto?"></input>
+                    <div className="boxaswer">
+                        <input onClick={clickHandler} className="input-answer" type="text" placeholder="¿cómo resolverias este reto?"></input>
                     </div>
                 </div>
 

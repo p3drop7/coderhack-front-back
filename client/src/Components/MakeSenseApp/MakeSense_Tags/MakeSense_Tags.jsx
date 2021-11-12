@@ -1,42 +1,42 @@
-import React, { useState } from 'react'
+/* import React, { useState } from 'react' */
 import './MakeSense_Tags.scss'
 import tag from"./assets/tag.png";
 import arrow2 from"./assets/arrow2.png";
 
-
 function MakeSense_Tags() {
 
-    const [dropDown, setDropDown] = useState(false)
+    /* const [dropDown, setDropDown] = useState(false) */
 
     function clickHandler(){
-        if(dropDown === false){
-            setDropDown(true)
+        const tagDropdown = document.querySelector('.container-tagoptions')
+        
+        if(tagDropdown.classList.contains('inactiveTags')){
+            tagDropdown.classList.remove('inactiveTags')
+            tagDropdown.classList.add('activeTags')
         }else{
-            setDropDown(false)
+            tagDropdown.classList.remove('activeTags')
+            tagDropdown.classList.add('inactiveTags')
         }
     }
 
     return (
         <div>
-
             {/* Tag section */}
-            <div class="container-tagsection" onClick={clickHandler}>
-                <div class="tags-container">
-                    <div class="tags">
+            <div className="container-tagsection" onClick={clickHandler}>
+                <div className="tags-container">
+                    <div className="tags">
                         <img src={tag} alt="tag"></img>
-                        <div class="text-tag">
+                        <div className="text-tag">
                             <p>etiquetas</p>
                         </div>
                     </div>
 
                     <img src={arrow2} alt="arrowtag"></img>
                 </div>
-            </div>
 
-            {/* Tag options */}
-            { (dropDown === true) && 
-                    <div class="container-tagoptions">
-                        <form class="tagoptions">
+                <div className="tagContainer-forAbsolutePosition">
+                    <div className="container-tagoptions inactiveTags">
+                        <form className="tagoptions">
                             <input type="checkbox" id="opt1" value="first_checkbox"></input>
                             <label for="opt1">todas</label><br></br>
         
@@ -56,8 +56,8 @@ function MakeSense_Tags() {
                             <label for="opt6">reducción de desigualdades</label><br></br>
                         </form>
                     </div>
-            }
-            
+                </div>
+            </div>
         </div>
     )
 }

@@ -29,7 +29,7 @@ function Landing() {
                         </p>
                     </div>
                     <ul className="container-btn-banner">
-                        <li className="btn-banner"><Link className="a_link" to="/access">comienza ahora</Link></li>
+                        <li className="btn-banner"><Link className="a_link" to="/access">Comenzar</Link></li>
                     </ul>
                 </div>
 
