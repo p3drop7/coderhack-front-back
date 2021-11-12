@@ -1,0 +1,319 @@
+@import "../../App.scss";
+
+//MAIN
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    min-height: 130vh;
+    overflow: hidden;
+    .big-bean{
+        z-index: 100;
+        @include btnNav(100%, 2400px, $blue-diane);
+        position: absolute;
+        left: 0px;
+        top: 200px;
+        border-radius: 800px;
+    }
+    .atlantis-bean{
+        display: block;
+        @include btnNav(480px, 900px, $atlantis);
+        position: absolute;
+        right: 0px;
+        top: 90px;
+        border-radius: 240px; 
+        transform: rotate(-40deg);
+    }
+    .borderbean-cerisedark{
+        @include btnNav(220px, 100px, none);
+        position: absolute;
+        left: -90px;
+        top: 5rem;
+        border-radius: 100px; 
+        border: 5px solid $cerise-dark;
+        transform: rotate(18deg);
+    }
+    .beanimg-container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .calypso-bean{
+            @include btnNav(220px, 100px, $calypso);
+            position: absolute;
+            left: 200px;
+            top: 90px;
+            border-radius: 100px; 
+            transform: rotate(18deg);
+        }
+        .borderbean-silvertree{
+            @include btnNav(300px, 120px, none);
+            position: absolute;
+            right: 200px;
+            top: 95px;
+            border-radius: 100px; 
+            transform: translate(-10px, -50px) rotate(-29deg);
+            border: 5px solid $silver-tree;
+        }
+        .img-bean{
+            z-index: 999;
+            width: 50rem;
+            height: 28rem;
+            border-radius: 332px;
+            transform: rotate(-7.83deg);
+            object-fit: cover;
+            box-shadow: 10px 11px 0px #FFF30D;
+            margin: 100px 100px 20px 100px;
+        }
+    }
+    section{
+        display: flex;
+        margin: 0 90px;
+        .box-container{
+            z-index: 9999;
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0px;
+        .box-participants{
+            display: flex;
+            position: relative;
+            align-items: center;
+            .minibean{
+                position: absolute;
+                right: 60px;
+                top: -40px;
+                @include btnNav(90px, 200px, none);
+                border-radius: 100px;
+                transform: rotate(40deg);
+                object-fit: cover;
+            }
+            .woman1{
+                background: url('./images/participants/1.png') center center;
+            }
+            .woman2{
+                background: url('./images/participants/3.jpg');
+                background-position: 62% 13%;
+            }
+            .participants-btn{
+                margin: 30px;
+                font-size: 28px;
+                font-weight: 400;
+                color: white;
+                max-width: 50%;
+                span{
+                    font-weight: 700;
+                }
+            }
+        }
+        .text-box{
+            width: 550px;
+            color: white;
+            p{
+                margin: 30px;
+                font-size: 1.8em;
+            }
+        }
+        .firstbox{
+            @include btnNav(500px, 125px, $calypso);
+            box-shadow: 6px 7px 0px #000000;
+        }
+        .secondbox{
+            @include btnNav(500px, 125px, $silver-tree);
+            box-shadow: 6px 7px 0px $parsley;
+
+        }
+    }
+    }
+    footer{
+        z-index: 9999999;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        .footer-container{
+            z-index: 5;
+            position: relative;
+            height: auto;
+            padding: 50px 100px;
+            background:white;
+            color: $blue-diane;
+            border-radius: 27px;
+            margin: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-direction: row;
+            img{
+                width: auto;
+                height: 30px;
+            }
+            .links{
+                h4{
+                    font-size: 20px;
+                }
+                a{
+                    text-decoration: none;
+                    color: $blue-diane;
+                }
+            }
+            .social-media{
+                display: flex;
+                li{
+                    list-style: none;
+                    a{
+                        display: inline-block;
+                        margin-right: 35px;
+                        background: $blue-diane;
+                        width: 50px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-decoration: none;
+                        border-radius: 50%;
+                        .fab{
+                            color: white;
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//NAVBAR
+.nav-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    // // justify-content: space-between;
+    // margin: 14px 54px;
+    img{
+        width: 238px;
+    }
+}
+
+// BANNER
+.banner-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 701px;
+    background: 
+    linear-gradient(180deg, rgba(12, 57, 68, 0) 0%, rgba(12, 57, 68, 0.8) 100%), 
+    linear-gradient(0deg, rgba(12, 57, 68, 0.3), rgba(12, 57, 68, 0.3)), url('./images/team/team.png') no-repeat center center fixed;
+    background-size: cover;
+    border-radius: 27px;
+    margin: 0 17px 20px 17px;
+    .text-banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #FFFFFF;
+        margin: 20px 0;
+        h2{
+            font-weight: 600;
+            font-size: 70px;
+            text-align: center;
+            span{
+                font-weight: 1000;
+                font-size: 100px;
+            }
+        }
+        p{
+            text-align: center;
+            font-weight: 400;
+            font-size: 36px;
+            margin: 0 25%;
+        }
+    }
+    .container-btn-banner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include btnNav(255px, 58px, $broom);
+        margin-top: 20px;
+        transition: all 0.5s;
+        cursor: pointer;
+        
+        .btn-banner{
+            list-style: none;
+            .a_link{
+                font-size: 1.5em;
+                font-weight: 800;
+                color: $blue-diane;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .container-btn-banner:hover {
+        @include btnNav(255px, 58px, #C7BD00)
+    }
+    
+    .flamepea-bean{
+        position: absolute;
+        @include btnNav(355px, 135px, $flame-pea);
+        border-radius: 108px;
+        transform: rotate(20.2deg);
+        right: -200px;
+        top: 654px;
+    }
+}
+
+//HOLD UP
+.container-holdup{
+    position: relative;
+    display: flex;
+    margin: 0 200px 100px 200px;
+    min-height: 30vh;
+    justify-content: center;
+    align-items: center;
+    color: $blue-diane;
+    .brickred-bean{
+        @include btnNav(260px, 140px, $brick-red);
+        position: absolute;
+        left: -300px;
+        bottom: 100px;
+        border-radius: 100px; 
+        transform: rotate(-18deg);
+    }
+        .h3-holdup{
+            position: relative;
+            z-index: 100;
+            width: 400px;
+            padding: 40px;
+            h3{
+                font-weight: 900;
+                font-size: 3.5rem;
+                text-align: center;
+            }
+            .broom-bean{
+                z-index: -1;
+                @include btnNav(250px, 100px, $broom);
+                position: absolute;
+                left: 70px;
+                top: 50px;
+                border-radius: 100px; 
+                transform: rotate(-30deg);
+            }
+        }
+        .p-holdup{
+            max-width: 40vw;
+            padding: 40px;
+            p{
+                font-weight: 500;
+                font-size: 2em;
+
+            }
+        }
+}

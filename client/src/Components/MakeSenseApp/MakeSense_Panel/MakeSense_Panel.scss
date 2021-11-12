@@ -1,0 +1,60 @@
+@import '../../../App.scss';
+
+.container-panel{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .panel{
+        @include box (660px, 67px);
+        justify-content: space-around;
+        align-items: center;
+        height: 60px;
+        margin-top: 90px;
+        
+        .container-panelsections{
+            width: 24.5%;
+            height: 93%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: all 0.3s;
+
+            .box-text{
+                @include textButtons();
+                background-color: transparent !important;
+                transition: all 0.3s;
+            }
+        }
+
+        .container-panelsections:hover {
+            background-color: $light-blue;
+        }
+
+        .panelIcon {
+            color: $calypso;
+            font-size: 1.4em;
+            background-color: transparent !important;
+        }
+    }
+}
+
+/* .selected {
+
+}
+
+.calypsoBackground {
+    background-color: $calypso;
+}
+
+.colorWhite{
+    .panelIcon {
+        color: white;
+    }
+    .box-text {
+        color: white;
+    }
+} */

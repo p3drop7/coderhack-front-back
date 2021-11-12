@@ -1,0 +1,99 @@
+@import '../../../App.scss';
+
+.container-comment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    .comment{
+        @include box(620px, 9px);
+        flex-direction: column;
+        padding: 24px 30px 10px 27px;
+        .container-userinfo{
+            display: flex;
+            padding-bottom: 12px;
+            justify-content: space-between;
+            width: 100%;
+            .user-data{
+                display: flex;
+            }
+            .user-datatext{
+                padding-left: 10px;
+                p{
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: $grey-lighten-1;
+                }
+            }
+            .points{
+                width: 30px;
+                height: 20px;
+            }
+        }
+
+        .container-usertext{
+            padding: 6px;
+            p{
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 23px;
+            }
+        }
+
+        .container-reactions{
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 10px 0 10px;
+            padding: 5px 0;
+            border-top: 1px solid $grey-lighten-1;
+            border-bottom: 1px solid $grey-lighten-1;
+            .reactions{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .reaction{
+                    padding: 10px 30px 5px 5px;
+                    display: flex;
+                    .box-text{
+                        @include textButtons();
+                    }
+                }
+            }
+            .save{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 5px 5px 5px;
+                display: flex;
+                .box-text{
+                    @include textButtons();
+                }
+            }
+        }
+
+        .container-answer{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 10px;
+            .boxaswer{
+                width: 100%;
+                .input-answer{
+                    @include inputBox(20px);
+                }   
+            }
+        }
+    }
+}
+
+.alertVisible{
+    display: flex;
+}
+
+.alertHidden {
+    display: none;
+}

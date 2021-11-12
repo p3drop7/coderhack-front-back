@@ -1,0 +1,41 @@
+@import '../../../App.scss';
+
+.container-questions{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0%;
+    z-index: 100;
+    background-color: rgba(33, 33, 33, 0.7);
+
+    .questions{
+        @include box(520px, 14px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 5px;
+        border: 1px solid $blue-diane;
+        .palm{
+            width: 42px;
+            height: auto;
+        }
+        .title-questions{
+            font-size: 14px;
+            font-weight: 700;
+            padding: 15px 29px;
+            color: $blue-diane;
+        }
+        .submit-questions{
+            width: 95%;
+            .submit{
+                @include submit($calypso, 37px);
+                cursor: pointer;
+            }
+        }
+    }
+}

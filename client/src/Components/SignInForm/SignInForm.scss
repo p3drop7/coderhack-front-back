@@ -1,0 +1,378 @@
+@import "../../App.scss";
+
+.SignInFormContainer {
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    .access_logo--form {
+        height: 2em;
+        width: 50%;
+        background-image: url("./logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: none;
+    }
+
+    .SignInFormContainer_div {
+        height: 90%;
+        width: 90%;
+        max-width: 450px;
+        min-width: 400px;
+        border: 2px solid $roman;
+        border-radius: 25px;
+        box-shadow: -10px 10px $roman;
+        background-color: $grey-lighten-3;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+
+        h2 {
+            font-size: 3em;
+            color: $blue-diane;
+            font-weight: 800;
+        }
+
+        .signIn_selector {
+            height: 35px;
+            width: 60%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: flex-start;
+            border-radius: 25px;
+            background-color: $grey-lighten-1;
+
+            .iniciarSesion_selector {
+                margin-top: 2px;
+                height: 88%;
+                width: 51%;
+                font-size: 0.9em;
+                margin-left: 2px;
+                border-radius: 25px;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .registrarse_selector {
+                margin-top: 2px;
+                height: 88%;
+                width: 49%;
+                margin-right: 2px;
+                font-size: 0.9em;
+                border-radius: 25px;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+        }
+
+        .access_form {
+            width: 70%;
+
+            div{
+                margin: 2px;
+                height: 70px;
+                width: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: flex-start;
+
+                label {
+                    padding: 10px 0px 5px 0px;
+                    font-size: 0.7em;
+                    color: $blue-diane;
+                    font-weight: bolder;
+                }
+
+                input {
+                    width: 100%;
+                    height: 50px;
+                    border: 1px solid $blue-diane;
+                    border-radius: 13px;
+                    background-color: $grey-lighten-3;
+                }
+
+                input[type=email]{
+                    padding-left: 15px;
+                    font-size: 0.8em;
+                    font-weight: bolder;
+                    color: $grey;
+                    outline: transparent;
+                }
+
+                input[type=password]{
+                    padding-left: 15px;
+                    font-size: 0.8em;
+                    font-weight: bolder;
+                    color: $grey;
+                    outline: transparent;
+                }
+            }
+
+            .access_submit-btn {
+                margin-top: 5px;
+                height: 40px;
+                width: 100%;
+                margin-top: 15px;
+                color: white;
+                font-weight: bolder;
+                background-color: $blue-diane;
+                border: none;
+                border-radius: 13px;
+                position: relative;
+                left: 3px;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+
+                .react-link {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+
+            .access_signInLink {
+                font-size: 0.7em;
+                font-weight: bolder;
+                color: $grey-darken-1;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    margin-left: 5px;
+                    color: $calypso;
+                    text-decoration: none;
+                }
+            }
+
+            .otherAcess {
+                margin-top: 20px;
+                width: 100%;
+
+                .googleAccess {
+                    height: 50px;
+                    font-size: 0.8em;
+                    
+                    border: none;
+                    background-color: white;
+                    border-radius: 1px;
+                    box-shadow: 0px 1px 1px $grey-lighten-1;
+                    text-align: center;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                    align-items: center;
+
+                    .gl-icon {
+                        font-size: 1.3em;
+                        margin: 0 5px;
+                    }
+
+                    .react-link--google {
+                        color: $grey-darken-1;
+                        text-decoration: none;
+                    }
+                }
+    
+                .facebookAcces {
+                    margin-top: 10px;
+                    height: 50px;
+                    font-size: 0.8em;
+                    background-color: #1877F2;
+                    border-radius: 3px;
+                    box-shadow: 0px 1px 1px $grey-lighten-1;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                    align-items: center;
+
+                    .fb-icon {
+                        color: white;
+                        font-size: 1.2em;
+                        margin: 0 5px;
+                    }
+
+                    .react-link--facebook {
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .signIn_form {
+            width: 70%;
+
+            div{
+                height: 70px;
+                width: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: flex-start;
+
+                label {
+                    padding: 10px 0px 5px 0px;
+                    font-size: 0.7em;
+                    color: $blue-diane;
+                    font-weight: bolder;
+                }
+
+                input {
+                    width: 100%;
+                    height: 50px;
+                    border: 1px solid $blue-diane;
+                    border-radius: 13px;
+                    background-color: $grey-lighten-3;
+                }
+
+                input[type=text]{
+                    padding-left: 15px;
+                    font-size: 0.8em;
+                    font-weight: bolder;
+                    color: $grey;
+                    background-color: transparent;
+                    outline: transparent;
+                }
+
+                input[type=email]{
+                    padding-left: 15px;
+                    font-size: 0.8em;
+                    font-weight: bolder;
+                    color: $grey;
+                    background-color: transparent;
+                    outline: transparent;
+                }
+
+                input[type=password]{
+                    padding-left: 15px;
+                    font-size: 0.8em;
+                    font-weight: bolder;
+                    color: $grey;
+                    background-color: transparent;
+                    outline: transparent;
+                }
+            }
+
+            .access_submit-btn {
+                margin-top: 5px;
+                height: 40px;
+                width: 100%;
+                margin-top: 15px;
+                color: white;
+                font-weight: bolder;
+                background-color: $blue-diane;
+                border: none;
+                border-radius: 13px;
+                position: relative;
+                left: 3px;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+
+                .react-link {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+
+            .access_signInLink {
+                font-size: 0.7em;
+                font-weight: bolder;
+                color: $grey-darken-1;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    margin-left: 5px;
+                    color: $calypso;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.broomBackground{
+    background-color: $broom;
+}
+
+@media (max-width: 720px) {
+
+    .SignInFormContainer {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .SignInFormContainer_div {
+        height: 650px !important;
+        max-width: 400px !important;
+        min-width: 350px;
+        border: 2px solid $roman;
+        border-radius: 25px;
+        box-shadow: -10px 10px $roman;
+        background-color: $grey-lighten-3;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .access_logo--form {
+        display: inline !important;
+    }
+}
+
+.access_bar1--form {
+    display: block;
+    width: 120vw;
+    height: 50%;
+    left: -20%;
+    background: $blue-diane;
+    display: block;
+    position: absolute;
+    transform-origin: bottom right;
+    transform: skew(0deg, 2deg);
+    z-index: -1;
+    display: none;
+}
+
+.access_bar2-form {
+    width: 120vw;
+    height: 100%;
+    left: -20%;
+    background-color: $blue-diane;
+    position: absolute;
+    transform-origin: top left;
+    transform: skew(0deg, 30deg);
+    z-index: -1;
+    display: none;
+}
+
+@media (max-width: 720px) {
+    .access_bar1--form, .access_bar2-form{
+        display: inline;
+    }
+}

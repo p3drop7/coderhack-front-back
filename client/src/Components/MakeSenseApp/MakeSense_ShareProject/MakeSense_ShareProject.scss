@@ -1,0 +1,72 @@
+@import '../../../App.scss';
+
+.container-shareproject{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    .shareproject{
+        @include box(620px, 9px);
+        border: 1px solid $blue-diane;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        text-align: center;
+        .user-img{
+            width: 80px;
+        }
+        .title-shareproject{
+            font-size: 18px;
+            font-weight: 700;
+            color: $blue-diane;
+            padding: 10px 0;
+        }
+        .questions-share{
+            padding: 10px 0;
+        }
+        .box-share{
+            @include inputBox(9px);
+            width: 100%;
+            height: 90px;
+        }
+        .container-buttons{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            .buttons{
+                display: flex;
+                .button{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border: 1px solid $blue-diane;
+                    margin: 10px;
+                    border-radius: 37px;
+                    padding: 0 10px;
+                    width: 145px;
+                    p{
+                        @include textButtons();
+                    }
+                }
+            }
+            .button-publish{
+                width: 25%;
+                .submit{
+                    @include submit($calypso, 37px);
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}
+
+.shareHidden {
+    display: none;
+}
+
+.shareActive {
+    display: flex;
+}

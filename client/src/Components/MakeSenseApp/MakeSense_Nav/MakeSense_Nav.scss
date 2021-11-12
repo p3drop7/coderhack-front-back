@@ -1,0 +1,150 @@
+@import '../../../App.scss';
+
+.container-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    border-bottom: 4px solid $calypso;
+    background: white;
+    .logo{
+        padding-left: 20px;
+        width: 220px;
+        height: auto;
+    }
+
+    .share{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: auto;
+        border: 1px solid $calypso;
+        box-shadow: 6px 4px 0px $calypso;
+        border-radius: 43px;
+        p{
+            font-weight: 900;
+            font-size: 18px;
+            color: $calypso;
+            margin: 13px 0;
+        }
+    }
+
+    .container-user{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 180px;
+        height: auto;
+        .notification{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid $grey-lighten-2;
+            img{
+                width: 16px;
+                height: auto;
+            }
+            .red-point{
+                position: absolute;
+                width: 7px;
+                height: 7px;
+                background: $brick-red;
+                border-radius: 50%;
+                bottom: 3px;
+                right: 0px;
+            }
+        }
+        .user-section{
+            display: flex;
+            align-items: center;
+            width: 100px;
+            height: 46px;
+            border: 0.821429px solid $grey-lighten-2;
+            border-radius: 94px;
+            padding: 3px;
+            margin: 10px;
+            .box-user{
+                display: flex;
+                flex: 50%;
+                .user-img{
+                    width: 40px;
+                    height: auto;
+                }
+            }
+            .box-arrow{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: 50%;
+                .arrow-img{
+                    width: 13px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+.nav-responsive{
+    display: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    .hr{
+        z-index: -1;
+        position: fixed;
+        bottom: 30px;
+        width: 100%;
+        display: block; 
+        height: 1px;
+        border: 0; 
+        border-top: 2px solid $calypso;
+        padding: 0; 
+    }
+    .share{
+        z-index: 999999;
+        position: fixed;
+        bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: auto;
+        border: 1px solid $calypso;
+        box-shadow: 6px 4px 0px $calypso;
+        border-radius: 43px;
+        background: white;
+        p{
+            font-weight: 900;
+            font-size: 18px;
+            color: $calypso;
+            margin: 13px 0;
+        }
+    }
+}
+
+@media (max-width: 850px){
+    .container-nav{
+        .share{
+            display: none !important;
+        }
+        .container-user{
+            padding-right: 0 30px;
+        }
+    }
+
+    .nav-responsive{
+        display: flex !important;
+    }
+}

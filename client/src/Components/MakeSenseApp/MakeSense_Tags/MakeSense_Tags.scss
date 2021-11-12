@@ -1,0 +1,68 @@
+@import '../../../App.scss';
+
+.container-tagsection{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 16px 0;
+    position: relative;
+
+    .tags-container{
+        @include box (620px, 46px);
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 10px;
+        .tags{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .text-tag{
+                font-size: 12px;
+                font-weight: 400;
+                color: $blue-diane;
+                margin: 3px;
+            }
+        }
+    }
+}
+
+.tagContainer-forAbsolutePosition{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+    .container-tagoptions{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 43px;
+        
+        .tagoptions{
+            @include box (620px, 14px);
+            display: block;
+            padding: 12px 12px 0 12px;
+            input{
+                margin: 0 7px 12px 0;
+            }
+            label{
+                font-size: 14px;
+                font-weight: 500;
+                color: $blue-diane;
+            }
+        }
+    }
+
+
+.activeTags {
+    display: flex;
+}
+
+.inactiveTags {
+    display: none;
+}

@@ -1,5 +1,20 @@
-// COLORS
+//FONTS
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+// COLORS
 //Stronger colors
 $blue-diane: #0C3944;    //Corporate color
 $calypso: #196C84;       //Entrepeneurs  //Nature Color
@@ -15,6 +30,7 @@ $silver-tree: #70AF90;  //Citizens
 $flame-pea: #F3976B;    //Nature Skin Color
 $roman: #E36164;        //Corporates
 $broom: #FFF30D;        //Corporate color
+$light-blue: #abdeed;
 
 //Neutral Colors
 $grey-lighten-5: #FAFAFA;
@@ -27,3 +43,69 @@ $grey-darken-1: #757575;
 $grey-darken-2: #616161;
 $grey-darken-3: #424242;
 $grey-darken-4: #212121;
+
+
+// MIXINS
+@mixin btnNav ($w, $h, $color){
+    width: $w;
+    height: $h;
+    padding: 10px;
+    border-radius: 37px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: $color;
+}
+
+@mixin accessBean ($h, $w, $color, $bodercolor, $boderWeight, $rot, $top, $right, $bottom, $left){
+    height: $h;
+    width: $w;
+    background-color: $color;
+    border-radius: 50px;
+    border: $boderWeight solid $bodercolor;
+    transform: rotate($rot);
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left
+}
+
+@mixin box ($w, $radius){
+    display: flex;
+    width: $w;
+    height: auto;
+    background: $grey-lighten-5;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: $radius;
+}
+
+@mixin textButtons (){
+    font-size: 12px;
+    font-weight: 700;
+    color: $grey;
+    margin: 0 4px;
+}
+
+@mixin inputBox ($radius){
+    width: 95%;
+    min-height: 40px;
+    background: $grey-lighten-3;
+    border-radius: $radius;
+    outline: none;
+    border: none;
+    margin: 10px;
+    padding: 5px 8px;
+}
+
+@mixin submit ($color, $radius){
+    width: 95%;
+    background: $color;
+    border-radius: $radius;
+    outline: none;
+    border: none;
+    margin: 10px;
+    padding: 5px 8px;
+    color: white;
+    height: 55px;
+}
