@@ -1,0 +1,23 @@
+@import '../../../App.scss';
+
+.container-panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .panel{
+        @include box (660px, 67px);
+        justify-content: space-around;
+        align-items: center;
+        padding: 24px 20px;
+        margin-top: 90px;
+        .container-panelsections{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .box-text{
+                @include textButtons();
+            }
+        }
+    }
+}

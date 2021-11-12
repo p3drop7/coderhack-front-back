@@ -4,6 +4,7 @@ import team from './images/team/team.png'
 import logo from './images/logo/logo.png'
 import './Landing.scss'
 import './ResponsiveLanding.scss'
+import { Link } from 'react-router-dom'
 
 function Landing() {
     return (
@@ -11,19 +12,15 @@ function Landing() {
             <body>
 
                 {/* NAVBAR */}
-                <nav class="nav-container">
+                <nav className="nav-container">
                     <img src={logo} alt="logo"></img>
-                    {/* <ul class="nav-ul">
-                        <li class="btn-register"><a href="#">Registrarse</a></li>
-                        <li class="btn-login"><a href="#">Iniciar sesion</a></li>
-                    </ul> */}
                 </nav>
 
                 {/* BANNER | Participa en el holdup! */}
-                <div class="banner-container">
-                    <div class="flamepea-bean"></div>
+                <div className="banner-container">
+                    <div className="flamepea-bean"></div>
 
-                    <div class="text-banner">
+                    <div className="text-banner">
                         <h2>cambiemos el mundo <span>juntxs</span></h2>
                         <p>
                             Explora la plataforma y ayuda a
@@ -31,20 +28,20 @@ function Landing() {
                             proyecto a través de la inteligencia colectiva
                         </p>
                     </div>
-                    <ul class="container-btn-banner">
-                        <li class="btn-banner"><a href="#">comienza ahora</a></li>
+                    <ul className="container-btn-banner">
+                        <li className="btn-banner"><Link className="a_link" to="/access">comienza ahora</Link></li>
                     </ul>
                 </div>
 
                 {/* SECTION | Que es el hold up? */}
-                <section class="container-holdup">
-                    <div class="brickred-bean"></div>
+                <section className="container-holdup">
+                    <div className="brickred-bean"></div>
                     
-                    <div class="h3-holdup">
-                        <div class="broom-bean"></div>
+                    <div className="h3-holdup">
+                        <div className="broom-bean"></div>
                         <h3>¿Qué es el hold-up?</h3>
                     </div>
-                    <div class="p-holdup">
+                    <div className="p-holdup">
                         <p>
                             Plataforma de co-creación entre emprendedores 
                             socioambientales y ciudadanos para dar solución
@@ -54,26 +51,26 @@ function Landing() {
                 </section>
 
                 <main>
-                    <div class="big-bean"></div>
-                    <div class="atlantis-bean"></div>
-                    <div class="borderbean-cerisedark"></div>        
+                    <div className="big-bean"></div>
+                    <div className="atlantis-bean"></div>
+                    <div className="borderbean-cerisedark"></div>        
                     
                     {/* SECTION | Bean image */}
-                    <section class="beanimg-container">
-                        <div class="calypso-bean"></div>
-                        <div class="borderbean-silvertree"></div>
+                    <section className="beanimg-container">
+                        <div className="calypso-bean"></div>
+                        <div className="borderbean-silvertree"></div>
 
-                        <img class="img-bean" src={team} alt="team"></img>
+                        <img className="img-bean" src={team} alt="team"></img>
                     </section>
                     
                     {/* SECTION | Participants */}
                     <section>
-                        <div class="box-container">
-                            <div class="box-participants firstbox">
-                                <p>Participar como <span>_emprendedxr</span></p>
-                                <div class="minibean woman1"></div>
+                        <div className="box-container">
+                            <div className="box-participants firstbox">
+                                <Link to="/access" className="participants-btn">Participar como <span>_emprendedxr</span></Link>
+                                <div className="minibean woman1"></div>
                             </div>
-                            <div class="text-box">
+                            <div className="text-box">
                                 <p>
                                     Somos una comunidad de ciudadanxs innovadorxs que 
                                     queremos ser protagonistas resolviendo los retos 
@@ -82,12 +79,12 @@ function Landing() {
                             </div>
                         </div>
 
-                        <div class="box-container">
-                            <div class="box-participants secondbox">
-                                <p>Participar como <span>_ciudadanx</span></p>
-                                <div class="minibean woman2"></div>
+                        <div className="box-container">
+                            <div className="box-participants secondbox">
+                                <Link className="participants-btn" to="/access" >Participar como <span>_ciudadanx</span></Link>
+                                <div className="minibean woman2"></div>
                             </div>
-                            <div class="text-box">
+                            <div className="text-box">
                                 <p>
                                     Somos una comunidad de ciudadanxs innovadorxs que 
                                     queremos ser protagonistas resolviendo los retos 
@@ -100,21 +97,21 @@ function Landing() {
 
                     {/* FOOTER */}
                     <footer>
-                        <div class="footer-container">
+                        <div className="footer-container">
                             <img src={logo} alt="logo"></img>
-                            <div class="links">
+                            <div className="links">
                                 <h4>Contacto</h4>
-                                <a href="#">Makesense en el mundo</a>
+                                <a href="https://makesense.org/es/contacto/" target='_blank'>Makesense en el mundo</a>
                             </div>
-                            <div class="links">
+                            <div className="links">
                                 <h4>Equipo</h4>
-                                <a href="#">Ofertas de empleo</a>
+                                <a href="https://www.welcometothejungle.com/es/companies/makesense/jobs" target='_blank'>Ofertas de empleo</a>
                             </div>
                 
-                            <ul class="social-media">
-                                <li><a href=""><BsInstagram className="fab" /></a></li>
-                                <li><a href=""><BsFacebook className="fab" /></a></li>
-                                <li><a href=""><BsYoutube className="fab"/></a></li>
+                            <ul className="social-media">
+                                <li><a href="https://www.instagram.com/makesensemx/" target='_blank'><BsInstagram className="fab" /></a></li>
+                                <li><a href="https://www.facebook.com/makesenseperu/?brand_redir=265752777272638" target='_blank'><BsFacebook className="fab" /></a></li>
+                                <li><a href="https://www.youtube.com/channel/UC3_bOquIY7-gtnA46w9SjhA" target='_blank'><BsYoutube className="fab"/></a></li>
                             </ul> 
                         </div>
                     </footer>

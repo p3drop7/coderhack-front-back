@@ -1,5 +1,6 @@
 //FONTS
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 *{
     margin: 0px;
@@ -67,4 +68,43 @@ $grey-darken-4: #212121;
     right: $right;
     bottom: $bottom;
     left: $left
+}
+
+@mixin box ($w, $radius){
+    display: flex;
+    width: $w;
+    height: auto;
+    background: $grey-lighten-5;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: $radius;
+}
+
+@mixin textButtons (){
+    font-size: 12px;
+    font-weight: 700;
+    color: $grey;
+    margin: 0 4px;
+}
+
+@mixin inputBox ($radius){
+    width: 95%;
+    min-height: 40px;
+    background: $grey-lighten-3;
+    border-radius: $radius;
+    outline: none;
+    border: none;
+    margin: 10px;
+    padding: 5px 8px;
+}
+
+@mixin submit ($color, $radius){
+    width: 95%;
+    background: $color;
+    border-radius: $radius;
+    outline: none;
+    border: none;
+    margin: 10px;
+    padding: 5px 8px;
+    color: white;
+    height: 55px;
 }

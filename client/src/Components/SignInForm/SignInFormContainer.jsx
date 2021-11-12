@@ -1,5 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { FcGoogle } from 'react-icons/fc'
+import { BsFacebook } from 'react-icons/bs'
 import './SignInForm.scss'
 
 function SignInFormContainer() {
@@ -17,7 +20,6 @@ function SignInFormContainer() {
         document.querySelector(".iniciarSesion_selector").classList.remove("broomBackground")
         document.querySelector(".registrarse_selector").classList.add("broomBackground")
     }
-
     return (
         <div className="SignInFormContainer">
 
@@ -44,16 +46,18 @@ function SignInFormContainer() {
                             <input type="password" name="password" placeholder="Ingrese su contraseña"></input>
                         </div>
                         
-                        <input type="submit" value="Ingresar" className="access_submit-btn"></input>
+                        <div className="access_submit-btn"><Link className="react-link" to="/app/main">Ingresar</Link></div>
                     
                         <div className="access_signInLink">¿Aún no estás registrado? <a href="">Registrate aquí</a></div>
 
                         <hr />
 
                         <div className="otherAcess">
-                            <div className="googleAccess">Iniciar con Google</div>
-                            <div className="facebookAcces">Continue with Facebook</div>
+                            <div className="googleAccess"><FcGoogle className="gl-icon"/><Link className="react-link--google" to="/app/main" >Iniciar con Google</Link></div>
+                            <div className="facebookAcces"><BsFacebook className="fb-icon"/><Link className="react-link--facebook" to="/app/main" >Continue with Facebook</Link></div>
                         </div>
+
+                        
                         
                     </form> 
                 }
@@ -81,7 +85,7 @@ function SignInFormContainer() {
                         
                         <div className="access_signInLink">¿Ya estás registrado? <a href="">Ingresa aquí</a></div>
 
-                        <input type="submit" value="Ingresar" className="access_submit-btn"></input>
+                       <div className="access_submit-btn"><Link className="react-link" to="/app/main">Ingresar</Link></div>
                     
                         
                     </form>
